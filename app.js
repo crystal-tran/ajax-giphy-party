@@ -30,8 +30,11 @@ function displayGif(results){
   let randomGifIndex = Math.floor(Math.random() * numOfResults)
   console.log(randomGifIndex)
 
-  let $gifContainer = $(".results").append("<div>")
-  let $gifImage = $()
+  //let $gifImage = $("<img>").attr("src", "results.data[randomGifIndex].url")
+  console.log(results.data[randomGifIndex].images.original.url);
+  //let $imageURL = results.data[randomGifIndex].images.original.url;
+  let $gifContainer = $(".results").append($("<img>")
+  .attr("src", results.data[randomGifIndex].images.original.url));
 
 
 
